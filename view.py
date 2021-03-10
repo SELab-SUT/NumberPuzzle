@@ -1,9 +1,13 @@
 def print_game(game):
-	raise NotImplementedError
+	for i in range(3):
+		for j in range(3):
+			print(game.position[3 * i + j], end='')
+		print()
 
 
 def print_commands():
-	raise NotImplementedError
+	print('Enter U to move the empty spot up, R to move it to the right,'
+	 ' L to move it to the left, and D to move it down')
 
 
 def take_input():
