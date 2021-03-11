@@ -2,10 +2,13 @@ class Game:
 	def __init__(self):
 		self.__cols = 3
 		self.__rows = 3
-		self.position = [[8, 3, 4],
-						 [2, 1, 7],
-						 [5, 6, '*']]
-		self.__empty_position = self.__find_empty_place();
+		self.position = [[1, 2, 3],
+						 [4, 5, 6],
+						 [7, '*', 8]]
+		self.__win_position = [[1, 2, 3],
+							   [4, 5, 6],
+							   [7, 8, '*']]
+		self.__empty_position = self.__find_empty_place()
 
 	def move(self, move_type):
 		move_position = self.__get_moving_tile(move_type)
@@ -32,5 +35,4 @@ class Game:
 		raise Exception("There is no empty place in the board.")
 
 	def has_finished(self):
-		# TODO: Return state of game based on the board
-		return False
+		return self.position == self.__win_position

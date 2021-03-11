@@ -8,6 +8,7 @@ def run():
 		print_game(game)
 		input_xy = take_input()
 		game.move(input_xy)
+	print_game(game)
 	print("Game over, You won!")
 
 
