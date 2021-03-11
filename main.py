@@ -11,7 +11,7 @@ def run():
 		except Exception as e:
 			print("Error:", e)
 	print_game(game)
-	print_win()
+	print_win(game.moves)
 
 if __name__=='__main__':
 	run()

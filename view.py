@@ -16,5 +16,5 @@ def take_input():
 		raise Exception('Invalid input')
 	return action
 
-def print_win():
-	print('Congratulations! You won')
+def print_win(moves):
+	print('Congratulations! You won in {} moves'.format(moves))
