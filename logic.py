@@ -9,6 +9,7 @@ class Game:
 							   [4, 5, 6],
 							   [7, 8, '*']]
 		self.__empty_position = self.__find_empty_place()
+		self.moves = 0
 
 	def move(self, move_type):
 		move_position = self.__get_moving_tile(move_type)
@@ -17,6 +18,7 @@ class Game:
 		move_x, move_y = move_position
 		self.position[move_x][move_y], self.position[empty_x][empty_y] = self.position[empty_x][empty_y], self.position[move_x][move_y]
 		self.__empty_position = move_position
+		self.moves += 1
 
 	def __get_moving_tile(self, move_type):
 		next_tile_distance = {'L': (0, 1), 'U': (1, 0), 'R': (0, -1), 'D': (-1, 0)}

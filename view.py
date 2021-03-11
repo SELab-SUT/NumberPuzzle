@@ -16,5 +16,11 @@ def take_input():
 		raise Exception('Invalid input')
 	return action
 
-def print_win():
-	print('Congratulations! You won')
+
+def print_win_and_get_replay(moves):
+	print(f'Congratulations! You won in {moves} moves. Do you want to replay? [Y/n]')
+	action = input().upper()
+	while action not in ['Y', 'N']:
+		print('Invalid input')
+		action = input().upper()
+	return action == 'Y'
