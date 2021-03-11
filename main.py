@@ -6,7 +6,10 @@ def run():
 	print_commands()
 	while not game.has_finished():
 		print_game(game)
-		game.move(take_input())
+		try:
+			game.move(take_input())
+		except Exception as e:
+			print("Error:", e)
 	print_game(game)
 	print_win()
 
