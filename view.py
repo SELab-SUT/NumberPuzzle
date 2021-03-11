@@ -1,7 +1,7 @@
 def print_game(game):
 	for i in range(3):
 		for j in range(3):
-			print(game.position[3 * i + j], end='')
+			print(game.position[i][j], end='')
 		print()
 
 
