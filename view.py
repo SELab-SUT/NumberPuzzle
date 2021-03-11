@@ -15,3 +15,6 @@ def take_input():
 	if action not in ['U', 'R', 'L', 'D']:
 		raise Exception('Invalid input')
 	return action
+
+def print_win():
+	print('Congratulations! You won')
