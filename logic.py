@@ -2,9 +2,9 @@ class Game:
 	def __init__(self):
 		self.__cols = 3
 		self.__rows = 3
-		self.position = [[1, 2, 3],
-						 [4, 5, 6],
-						 [7, '*', 8]]
+		self.position = [[2, 4, 3],
+						 [1, 6, '*'],
+						 [7, 5, 8]]
 		self.__win_position = [[1, 2, 3],
 							   [4, 5, 6],
 							   [7, 8, '*']]
