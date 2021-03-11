@@ -6,9 +6,12 @@ def print_game(game):
 
 
 def print_commands():
-	print('Enter U to move the empty spot up, R to move it to the right,'
+	print('Enter U to move a block up, R to move it to the right,'
 	 ' L to move it to the left, and D to move it down')
 
 
 def take_input():
-	raise NotImplementedError
+	action = input().upper()
+	if action not in ['U', 'R', 'L', 'D']:
+		raise Exception('Invalid input')
+	return action
